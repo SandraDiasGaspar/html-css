@@ -18,23 +18,33 @@
             border: 1px solid black;
             padding: 10px;
         }
+
+        thead {
+            background-color: gray;
+            color: white;
+        }
+
+        .total {
+            color: white;
+            background-color: gray;
+            text-align: left;
+        }
+       
     </style>
 </head>
 <body>
     <table>
     <thead>
         <tr>
-            <th>Área</th>
-            <th>Disciplina</th>
-            <th>Notas</th>
-            <th>Nota 1</th>
-            <th>Nota 2</th>
-            <th>Média</th>
+            <th scope="col" >Área</th>
+            <th scope="col" >Disciplina</th>
+            <th scope="col" colspan="2">Notas</th>
+            <th scope="col">Média</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th>Exatas</th>
+            <th rowspan="4" scope="rowgroup">Exatas</th>
             <td>Matemática</td>
             <td>00</td>
             <td>00</td>
@@ -59,11 +69,11 @@
             <td>00</td>
         </tr>
         <tr>
-            <th>Média de Exatas</th>
-            <td>00</td>
+            <th colspan="4" scope="row" class="total">Média de Exatas</th>
+            <td class="total">00</td>
         </tr>
         <tr>
-            <th>Humanas</th>
+            <th rowspan="2" scope="rowgroup">Humanas</th>
             <td>História </td>
             <td>00</td>
             <td>00</td>
@@ -76,10 +86,9 @@
             <td>00</td>
         </tr>
         <tr>
-            <th>Média de Humanas</th>
-            <td>00</td>
+            <th colspan="4" scope="row" class="total">Média de Humanas</th>
+            <td class="total">00</td>
         </tr>
-       
     </tbody>
 </table>
 </body>
